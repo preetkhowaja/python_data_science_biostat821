@@ -40,6 +40,7 @@ def sd(list_of_lists):
     return sd
 
 
+## Helper function that computes covariance of all data
 def covariance(list_of_lists):
     list1 = list_of_lists[0]
     list2 = list_of_lists[1]
@@ -55,9 +56,10 @@ def covariance(list_of_lists):
     for i in range(len(subtracted1)):
         product = subtracted1[i] * subtracted2[i]
         sum_of_products += product
-    return sum_of_products / 6
+    return sum_of_products / len(list1)
 
 
+## Helper function that computes correlation of all data
 def corr(list_of_lists):
     list1 = list_of_lists[0]
     list2 = list_of_lists[1]
@@ -88,4 +90,7 @@ def analyze_data(list_of_lists, method):
         return round(corr(list_of_lists), 3)
 
 
+print(analyze_data(get_data("example.txt"), "average"))
+print(analyze_data(get_data("example.txt"), "standard deviation"))
+print(analyze_data(get_data("example.txt"), "covariance"))
 print(analyze_data(get_data("example.txt"), "correlation"))
