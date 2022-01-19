@@ -1,6 +1,6 @@
 # Python Functions for Data science
 
-This repository contains code that has two functions as follows:
+This repository contains code that has two main functions in the file **functions.py** as follows:
 
 ### `get_data()`
 _accepts_: a file path (string) and
