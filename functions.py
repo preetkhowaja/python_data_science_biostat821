@@ -5,7 +5,7 @@
 import math
 
 # this function accepts a txt file and returns a list of lists of integers from that file
-def get_data(file):
+def get_data(file: str) -> list:
     with open(file) as f:
         LL = []
         for line in f:
@@ -18,7 +18,7 @@ def get_data(file):
 
 
 ## Helper function that computes average of all data
-def average(list_of_lists):
+def average(list_of_lists: list) -> float:
     list_of_means = []
     for list in list_of_lists:
         mean1 = sum(list) / len(list)
@@ -28,7 +28,7 @@ def average(list_of_lists):
 
 
 ## Helper function that computes standard deviation of all data
-def sd(list_of_lists):
+def sd(list_of_lists: list) -> float:
     Average = average(list_of_lists)
     sum_squared = 0
     lengths = 0
@@ -94,3 +94,4 @@ print(analyze_data(get_data("example.txt"), "average"))
 print(analyze_data(get_data("example.txt"), "standard deviation"))
 print(analyze_data(get_data("example.txt"), "covariance"))
 print(analyze_data(get_data("example.txt"), "correlation"))
+print(type(average(get_data("example.txt"))))
