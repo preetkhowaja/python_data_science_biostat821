@@ -79,7 +79,7 @@ def corr(list_of_lists):
 
 
 # This function computes various metrics from the input data
-def analyze_data(list_of_lists, method):
+def analyze_data(list_of_lists: list, method: str) -> float:
     if method == "average":
         return round(average(list_of_lists), 1)
     elif method == "standard deviation":
