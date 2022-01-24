@@ -88,7 +88,7 @@ def analyze_data(list_of_lists: list, method: str) -> float:
         return round(covariance(list_of_lists), 1)
     elif method == "correlation":
         return round(corr(list_of_lists), 3)
-    
+    assert False
 
 print(analyze_data(get_data("example.txt"), "average"))
 print(analyze_data(get_data("example.txt"), "standard deviation"))
