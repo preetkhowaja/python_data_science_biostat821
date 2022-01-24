@@ -90,8 +90,8 @@ def analyze_data(list_of_lists: list, method: str) -> float:
         return round(corr(list_of_lists), 3)
 
 
-print(analyze_data(get_data("example.txt"), "average"))
-print(analyze_data(get_data("example.txt"), "standard deviation"))
-print(analyze_data(get_data("example.txt"), "covariance"))
-print(analyze_data(get_data("example.txt"), "correlation"))
-print(type(average(get_data("example.txt"))))
+if __name__ == "__main__":
+    print(analyze_data(get_data("example.txt"), "average"))
+    print(analyze_data(get_data("example.txt"), "standard deviation"))
+    print(analyze_data(get_data("example.txt"), "covariance"))
+    print(analyze_data(get_data("example.txt"), "correlation"))
